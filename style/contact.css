@@ -1,0 +1,243 @@
+.contact-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 35vh;
+
+  >p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #dcdcdc;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #007bff;
+    }
+
+  }
+
+  >h2 {
+    color: #232323;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.contact-form {
+  margin-top: 2rem;
+
+  >form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    >div {
+      display: flex;
+      gap: 1.5rem;
+
+      >div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+          color: #1e1e1e;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        input {
+          border: none;
+          background-color: none;
+          border: 1px solid #dcdcdc;
+          padding: 8px 5px;
+          margin-top: 3px;
+          border-radius: 5px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #c8c6c6;
+          }
+        }
+      }
+    }
+
+    >section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      textarea {
+        border: none;
+        background-color: none;
+        border: 1px solid #dcdcdc;
+        padding: 8px 5px;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #c8c6c6;
+        }
+      }
+    }
+
+    >article {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      >button {
+        background-color: #007bff;
+        border: none;
+        color: #f1f8ff;
+        padding: 10px 22px;
+        border-radius: 8px;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      >a {
+        color: #cccccc;
+
+        >span {
+          color: #1e1e1e;
+        }
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  >div {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+    >h2 {
+      color: #232323;
+      font-size: 35px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    >article {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-around;
+
+      >:nth-child(2) {
+        >article {
+          background-color: #00C7A2 !important;
+        }
+      }
+
+      >div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: .5px solid #E8E8E8;
+        padding: 10px;
+        min-width: 450px;
+        border-radius: 15px;
+          font-weight: 600;
+
+
+        >article {
+          background-color: #9570FF;
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          box-sizing: unset;
+          border-radius: 7px;
+
+          >img {
+            width: 1.3rem;
+            height: 1.3rem;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contact-banner {
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .contact-form {
+    margin-top: 3rem;
+
+    >form {
+      >div {
+        flex-direction: column;
+      }
+    }
+
+    >div {
+      gap: 1rem;
+      border-radius: 10px;
+      padding: 1.5rem;
+      padding-bottom: 0;
+      position: unset;
+
+      >img {
+        /* align-self: flex-end; */
+        width: 200px;
+        position: unset;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .get-in-touch {
+
+
+    >div {
+
+      >h2 {
+        font-size: 30px;
+        margin-bottom: 1rem;
+      }
+
+      >article {
+        >div {
+          min-width: 320px;
+        }
+      }
+    }
+  }
+}
